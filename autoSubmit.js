@@ -11,11 +11,12 @@ if (currentRoute in routes) {
   }
 }
 
+// Need this vanilla click for Talent Sign up page
 submit.click();
 
+// This is to trigger React click events
 setTimeout(() => {
   const submitBtn = document.querySelector('[type="submit"]');
-  console.log(submitBtn.checkValidity());
   submitBtn.dispatchEvent(new Event('click', { bubbles: true }));
 }, 0);
 
