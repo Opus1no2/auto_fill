@@ -101,8 +101,11 @@ const routes = {
           autoComplete.dispatchEvent(new Event('click', { bubbles: true }));
 
           const autoOptions = document.querySelector('.autocomplete-options');
-          const options = [...autoOptions.querySelectorAll('div')];
-          random(options).click();
+
+          if (autoOptions) {
+            const options = [...autoOptions.querySelectorAll('div')];
+            random(options).click();
+          }
         }
 
         const experienceLevel = document.querySelector('select.form-control');
